@@ -1,4 +1,10 @@
-# Rough.js
+# Rough.js (FORK)
+
+> This is a fork of the roughjs library.
+> With changes:
+> - use tsdown
+> - esm-only exports
+> - inlined deps
 
 <b>Rough.js</b> is a small (\<9 kB) graphics library that lets you draw in a _sketchy_, _hand-drawn-like_, style.
 The library defines primitives to draw lines, curves, arcs, polygons, circles, and ellipses. It also supports drawing [SVG paths](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths).
