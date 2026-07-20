@@ -4,7 +4,8 @@
 > With changes:
 > - use tsdown
 > - esm-only exports
-> - inlined deps
+> - inlined deps (`hachure-fill`, `path-data-parser`, `points-on-curve`, `points-on-path`)
+> - use vite for visual tests
 
 <b>Rough.js</b> is a small (\<9 kB) graphics library that lets you draw in a _sketchy_, _hand-drawn-like_, style.
 The library defines primitives to draw lines, curves, arcs, polygons, circles, and ellipses. It also supports drawing [SVG paths](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths).
@@ -14,9 +15,6 @@ Rough.js works with both [Canvas](https://developer.mozilla.org/en-US/docs/Web/A
 ![Rough.js sample](https://roughjs.com/images/cap_demo.png)
 
 [@RoughLib](https://twitter.com/RoughLib) on Twitter.
-
-## Fork Information
---.
 
 ## Install
 

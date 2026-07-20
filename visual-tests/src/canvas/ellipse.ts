@@ -1,0 +1,29 @@
+import '../style.css'
+import rough from "@flyncx/roughjs"
+
+
+document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
+  <canvas id="canvas" width="800" height="800"/>
+`
+
+function generate() {
+    const canvas: HTMLCanvasElement | null = document.querySelector("#canvas");
+    if (!canvas) throw Error("#canvas is not found");
+    const rc = rough.canvas(canvas);
+
+    rc.ellipse(10 + 40, 10 + 40, 80, 80);
+    rc.ellipse(110 + 40, 10 + 40, 80, 80, { fill: 'red' });
+    rc.ellipse(210 + 40, 10 + 40, 80, 80, { fill: 'pink', fillStyle: 'solid' });
+    rc.ellipse(310 + 40, 10 + 40, 80, 80, { fill: 'red', fillStyle: 'cross-hatch' });
+    rc.ellipse(410 + 40, 10 + 40, 80, 80, { fill: 'red', fillStyle: 'zigzag', hachureGap: 8 });
+    rc.ellipse(510 + 40, 10 + 40, 80, 80, { fill: 'red', fillStyle: 'dots' });
+
+    rc.circle(10 + 40, 110 + 40, 80, { roughness: 2 });
+    rc.circle(110 + 40, 110 + 40, 80, { fill: 'red', stroke: 'blue', hachureAngle: 0, strokeWidth: 3 });
+    rc.circle(210 + 40, 110 + 40, 80, { fill: 'pink', fillWeight: 3, hachureGap: 8, hachureAngle: 45 });
+
+    rc.ellipse(300, 350, 480, 280, { fill: 'red', fillStyle: 'dots', hachureGap: 20, hachureAngle: 0, fillWeight: 2 });
+}
+
+generate()
+
